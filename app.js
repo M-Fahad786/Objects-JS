@@ -1,98 +1,5 @@
 /*
-let obj = {
-  Name: "Tesla X",
-  Color: "Black",
-  Model: 2021,
-  Manufacturer: "Tesla",
-  Specifications: "Auto Drive Feature",
-  Wheels: "Alloy",
-};
-console.log(obj);
-*/
-
-/*
-let obj2 = {
-  names: ["Fahad", "Zahid", "Mustafa"],
-  age: [18, 45, 10],
-};
-console.log(obj2);
-*/
-
-/*
-let obj3 = {};
-obj3.name = "Fahad";
-obj3.age = 18;
-obj3.studies = "Bachelor";
-obj3.city = "Karachi";
-console.log(obj3);
-*/
-
-/*
-let obj4 = {
-  Name: "Tesla X",
-  Color: "Black",
-  Model: 2021,
-  Manufacturer: "Tesla",
-  Specifications: "Auto Drive Feature",
-  Wheels: "Alloy",
-};
-for (let key in obj4) {
-  console.log(
-    "The following value of" + " " + key + " " + "is" + " " + obj4[key]
-  );
-}
-*/
-
-/*
-let obj5= {
-  Name: "Tesla X",
-  Color: "Black",
-  Model: 2021,
-  Manufacturer: "Tesla",
-  Specifications: "Auto Drive Feature",
-  Wheels: "Alloy",
-};
-console.table(obj5)
-*/
-
-/*
-function Plan(name, price, timings, pages) {
-  this.name = name;
-  this.price = price;
-  this.timings = timings;
-  this.pages = pages;
-}
-let obj = new Plan("Basic" , "20$" , "6hours" , "20");
-let xyz = new Plan("Pro" , "20$" , "6hours" , "20");
-
-console.log("price" in obj)
-*/
-
-/*
-let myQuestions = [
-  {
-    question: "What is Your Name?",
-    answers: {
-      a: "Fahad",
-      b: "Zahid",
-      c: "Mustafa",
-    },
-    correctAnswer: "c",
-  },
-  {
-    question: "What is Your Age?",
-    answers: {
-      a: "15",
-      b: "18",
-      c: "17",
-    },
-    correctAnswer: "b",
-  },
-];
-*/
-
-/*
-// ASSIGNMENT
+// ASSIGNMENT 1
 // Create a Constructor for creating users or employee's data ( id, employee name, father name, email, address, designation, experience, salary)
 
 // Creating a Constructor
@@ -178,23 +85,148 @@ let tr = document.createElement("tr");
 
 // Printing Table Header
 for (let key in data1) {
-  let thead = document.createElement("td");
-  thead.appendChild(document.createTextNode(key));
-  tr.appendChild(thead);
-  table.appendChild(tr);
+  let td = document.createElement("td");
+  let text = document.createTextNode(key);
+  td.appendChild(text);
+  tr.appendChild(td)
+  table.appendChild(tr)
 }
 // Table Header Ended
 
 // Printing Table Using For In & FOR LOOP
 for (let i = 0; i < allData.length; i++) {
   let trow = document.createElement("tr");
-  table.appendChild(trow);
   for (let key in allData[i]) {
-    let td = document.createElement("td");
-    td.appendChild(document.createTextNode(allData[i][key]));
-    trow.appendChild(td);
+    let tdata = document.createElement("td");
+    let text2 = document.createTextNode(allData[i][key]);
+    tdata.appendChild(text2);
+    trow.appendChild(tdata);
     table.appendChild(trow);
   }
-}
+  }
 // Printing Ended
+*/
+
+/*
+// Assignment 2
+// Create Shapes Using Constructor and display them on browser
+
+// Creating Constructor For Shapes
+function Shapes(width, height, color, border, borderRadius , transform) {
+  this.width = width;
+  this.height = height;
+  this.color = color;
+  this.border = border;
+  this.borderRadius = borderRadius;
+  this.transform = transform
+}
+// Constructor Ended
+
+// Declaring Variables for Shapes
+let rectangle = new Shapes("300px", "200px", "yellow", "5px solid black");
+let circle = new Shapes("200px", "200px", "orange", "5px solid black", "50%");
+let square = new Shapes("200px", "200px", "red" , "5px solid black");
+let parallelogram = new Shapes("250px" , "200px" , "lightBlue" , "5px solid black" , undefined ,"skew(20deg)" )
+// Declaration Ended
+
+// Targeting Element
+let box = document.getElementById("box");
+// Targeting Ended
+
+// Creating Shapes (Rectangle)
+let rectangleBox = document.createElement("div");
+rectangleBox.style.width = rectangle.width;
+rectangleBox.style.height = rectangle.height;
+rectangleBox.style.backgroundColor = rectangle.color;
+rectangleBox.style.border = rectangle.border;
+box.appendChild(rectangleBox);
+
+// Creating Shapes (Circle)
+let circleBox = document.createElement("div");
+circleBox.style.width = circle.width;
+circleBox.style.height = circle.height;
+circleBox.style.backgroundColor = circle.color;
+circleBox.style.border = circle.border;
+circleBox.style.borderRadius = circle.borderRadius;
+box.appendChild(circleBox);
+
+// Creating Shapes (Square)
+let squareBox = document.createElement("div");
+squareBox.style.width = square.width;
+squareBox.style.height = square.height;
+squareBox.style.backgroundColor = square.color;
+squareBox.style.border = square.border;
+box.appendChild(squareBox);
+
+// Creating Shapes (Parallelogram)
+let parallelBox = document.createElement("div");
+parallelBox.style.width = parallelogram.width;
+parallelBox.style.height = parallelogram.height;
+parallelBox.style.backgroundColor = parallelogram.color;
+parallelBox.style.border = parallelogram.border;
+parallelBox.style.transform = parallelogram.transform;
+box.appendChild(parallelBox);
+*/
+
+/*
+// Assignment 3
+// Create Restaurant Menu Using Constructor and display them on browser
+
+// Creating Constructor For MENU
+function Menu(name, price) {
+  this.name = name;
+  this.price = price;
+}
+// Constructor Ended
+
+// Declaring Variables For Menu
+let menu1 = new Menu("Burgers :", "250");
+let menu2 = new Menu("BBQ :", "500");
+let menu3 = new Menu("Premiums :", "750");
+let menu4 = new Menu("Sandwiches :", "300");
+let menu5 = new Menu("Rolls :", "150");
+let menu6 = new Menu("Fast Food :", "500");
+let menu7 = new Menu("Desi Food :", "400");
+let menu8 = new Menu("IceCreams :", "200");
+let menu9 = new Menu("Beverages :", "100");
+let menu10 = new Menu("Sea Foods :", "1000");
+let allMenu = [
+  menu1,
+  menu2,
+  menu3,
+  menu4,
+  menu5,
+  menu6,
+  menu7,
+  menu8,
+  menu9,
+  menu10,
+];
+// Declaration Ended
+
+// Targeting And Creating Elements
+let menu = document.getElementById("menu");
+let heading = document.createElement("h1");
+heading.style.textAlign = "center";
+heading.appendChild(document.createTextNode("MENU"));
+menu.appendChild(heading);
+// Targeting Ended
+
+// Printing Menu
+let ul = document.createElement("ul");
+let h4 = document.createElement("h4");
+h4.style.textTransform = "capitalize";
+for (let key in menu1) {
+  h4.appendChild(document.createTextNode(" " + key));
+  ul.appendChild(h4);
+  menu.appendChild(ul);
+}
+for (let i = 0; i < allMenu.length; i++) {
+  let li2 = document.createElement("li");
+  for (let key in allMenu[i]) {
+    li2.appendChild(document.createTextNode("  " + allMenu[i][key]));
+    ul.appendChild(li2);
+    menu.appendChild(ul);
+  }
+}
 */

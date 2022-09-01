@@ -1,4 +1,4 @@
-/*  
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +11,14 @@ width: 100px;
 height: 100px;
 font-weight: bold;
 }
-/*  
+#box {
+  display: flex;
+  margin: 15px 10px 15px 10px;
+  justify-content: space-evenly;
+}
+
+#menu  {
+  text-align: center;
+ font-size: 25px;
+}
+*/
